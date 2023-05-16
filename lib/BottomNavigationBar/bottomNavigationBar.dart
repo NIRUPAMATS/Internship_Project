@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_internship_project/Frame1/frame1.dart';
+import 'package:flutter_internship_project/Frame3/frame3.dart';
 class Bottom extends StatefulWidget {
   const Bottom({Key? key}) : super(key: key);
 
@@ -13,8 +14,10 @@ class _BottomState extends State<Bottom> {
   void _onTabSelected(int index) {
     setState(() {
        _currentIndex = index;
-      if(index==0)
+      if(index==1)
         Navigator.push(context, MaterialPageRoute(builder: (context)=>Frame1()));
+      else if(index==2)
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Frame3()));
     });
   }
   @override
